@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Strona główna</title>
+</head>
+<body>
+<h1 style="margin: 5px">Strona z produktami:</h1>
+<div class="list-group" style="margin: 5px; text-align: left">
+    <ul>
+        <li><a href="/list" class="list-group-item">wyświetl wszystkie produkty</a></li>
+        <li><a href="/list?category=GROCERIES" class="list-group-item">wyświetl produkty z kategorii art. spożywcze</a>
+        </li>
+        <li><a href="/list?category=HOUSEHOLD" class="list-group-item">wyświetl produkty z kategorii art. gosp.
+            domowego</a></li>
+        <li><a href="/list?category=OTHER" class="list-group-item">wyświetl produkty z kategorii inne</a></li>
+    </ul>
+</div>
+<form action="/add" method="post" style="width: 500px; margin: 20px;">
+    <h2>Dodawanie produktu</h2>
+    <div class="mb-3">
+        <label for="name">Nazwa</label>
+        <input type="text" class="form-control" id="name" name="name">
+    </div>
+    <div class="mb-3">
+        <label for="price">Cena</label>
+        <input type="text" class="form-control" id="price" name="price">
+    </div>
+    <div class="mb-3">
+        <label for="category">Kategoria</label>
+        <select id="category" name="category">
+            <option hidden="hidden">Wybierz...</option>
+            <option value="GROCERIES">artykuły spożywcze</option>
+            <option value="HOUSEHOLD">artykuły domowe</option>
+            <option value="OTHER">inne</option>
+        </select>
+    </div>
+    <input type="submit" value="Dodaj">
+</form>
+</body>
+</html>

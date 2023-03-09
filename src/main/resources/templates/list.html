@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pl" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+<h1 style="width: 500px; margin: 20px; text-align: left">Lista wszystkich produktów</h1>
+<a href="/" style="width: 500px; margin: 20px; text-align: left">Powrót do strony głównej</a>
+<div style="width: 500px; margin: 20px; text-align: left" th:each="product: ${products}">
+    <ul class="list-group">
+        <li th:text="|${product.name} ${product.price}zł - ${product.category}|"></li>
+    </ul>
+</div>
+</body>
+</html>
